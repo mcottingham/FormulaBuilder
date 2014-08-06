@@ -1,3 +1,7 @@
 <section data-ng-controller="IndexController">
-  <h1 mean-token="'home-default'">This is the home view</h1>
+    <input type="text" ng-model="data.userInput" />
+    <span ng-bind="data.userInput"></span>
+    <div style="display: block; margin-top: 25px">
+        <span data-math-jax="data.userInput"></span>
+    </div>
 </section>

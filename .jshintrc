@@ -73,6 +73,7 @@
     // Custom Globals
     "globals": {
       "angular"     : true,
+      "MathJax"     : true,
       "define"      : false,
       "require"     : false,
       "exports"     : false,
