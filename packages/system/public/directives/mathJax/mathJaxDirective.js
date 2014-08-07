@@ -5,7 +5,6 @@ angular.module('mean.directives', [])
             return {
                 restrict: 'A',
                 controller: ['$scope', '$element', '$attrs', function($scope, $element, $attrs) {
-                    console.log($attrs);
                     $scope.$watch($attrs.mathJax, function(value) {
                         var script = angular.element('<script type="math/tex">').html(value === undefined ? '' : value);
                         $element.html('');
