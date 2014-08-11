@@ -9,11 +9,24 @@ MathJax.Hub.Config({
 });
 MathJax.Hub.Configured();
 
+var ExpressionParser = function() {
+
+};
+
+ExpressionParser.prototype.parse = function(input) {
+    return '\\frac{5}{4}';
+};
+
 angular.module('mean.system').controller('IndexController', ['$scope', 'Global',
     function ($scope, Global) {
-        $scope.global = Global;
-        $scope.data = {};
+        var $this = this;
+        $this.data = {};
 
-        $scope.data.userInput = '\\frac{4}{5}';
+        this.parse = function(input) {
+            var ep = new ExpressionParser();
+            $this.data.parserOutput = ep.parse(input);
+        }
     }
 ]);
+
+
