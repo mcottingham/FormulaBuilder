@@ -72,6 +72,8 @@
 
     // Custom Globals
     "globals": {
+      "$"           : true,
+      "_"           : true,
       "angular"     : true,
       "MathJax"     : true,
       "define"      : false,
